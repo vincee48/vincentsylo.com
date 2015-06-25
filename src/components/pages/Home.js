@@ -70,37 +70,37 @@ var Home = React.createClass({
     },
     formSubmit: function(e) {
         e.preventDefault();
-        
+
         var hasError = false;
-        
+
         if (this.state.name.length === 0 || this.state.email.length === 0 || this.state.description.length === 0) {
-            this.setState({ 
+            this.setState({
                 message: 'There was an error with your request. All fields are required.',
-                refresh: false 
+                refresh: false
             });
             this.refs.notification.show();
             hasError = true;
         }
-        
+
         if (!hasError && !this.validateEmail(this.state.email)) {
-            this.setState({ 
+            this.setState({
                 message: 'There was an error with your request. Your email is invalid.',
-                refresh: false 
+                refresh: false
             });
             this.refs.notification.show();
             hasError = true;
         }
-        
+
         if (!hasError && grecaptcha.getResponse().length === 0) {
-            this.setState({ 
+            this.setState({
                 message: 'There was an error with your request. Please confirm that you\'re not a robot.',
-                refresh: false 
+                refresh: false
             });
             this.refs.notification.show();
             hasError = true;
-        }        
-        
-        if (!hasError) {  
+        }
+
+        if (!hasError) {
             $.ajax({
                 type: 'POST',
                 url: 'https://mandrillapp.com/api/1.0/messages/send.json',
@@ -128,20 +128,20 @@ var Home = React.createClass({
                 }
             }).done(function (response) {
                 if (response[0].status === 'sent') {
-                    this.setState({ 
+                    this.setState({
                         message: 'Thank you for your interest! I will reach out to you soon.',
-                        refresh: true                            
+                        refresh: true
                     });
                     this.refs.notification.show();
                 } else {
-                    this.setState({ 
+                    this.setState({
                         message: 'There was an error with your request. Please try again.',
-                        refresh: false 
+                        refresh: false
                     });
                     this.refs.notification.show();
                 }
             });
-        }             
+        }
     },
     componentDidMount: function() {
         window.addEventListener('scroll', this.handleScroll);
@@ -203,7 +203,7 @@ var Home = React.createClass({
                         <div className="row">
                             <div className="twelve columns" id="jumbo-magic">
                                 <h1>Vincent Lo</h1>
-                                <div className="tag-line secondary-color">Developer</div>
+                                <div className="tag-line">Developer</div>
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@ var Home = React.createClass({
                                     I enjoy creating <strong>functional</strong> &amp; <strong>user-friendly</strong> websites and web applications for small businesses.
                                 </p>
                                 <p>
-                                    With experience ranging from the development of <strong>software</strong>, <strong>web applications</strong> &amp; <strong>games</strong>, my passion for development &amp; design is endless.
+                                    With experience ranging from the development of <strong>software</strong>, <strong>web applications</strong> &amp; <strong>games</strong>, I have a strong passion for development &amp; design.
                                 </p>
                             </div>
                             <div className="six columns">
@@ -282,6 +282,9 @@ var Home = React.createClass({
                                 <div className="twelve columns">
                                     <span className="title">Contact Me</span>
                                     <hr/>
+                                    <p>
+                                        Interested in working together? Please fill out the following form and I will get back to you as soon as I can.
+                                    </p>
                                 </div>
                             </div>
                             <div className="row">
