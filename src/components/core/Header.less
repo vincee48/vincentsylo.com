@@ -1,0 +1,41 @@
+@import '../../styles/mixins/colours.less';
+@import '../../styles/mixins/elements.less';
+
+.Header {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    background-color:@teal500;
+    border-top: 1px solid @deepOrange500;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 1em 0;
+        li {
+            display: inline-block;
+            margin: 0 0.5em;
+            a {
+                font-size: 2em;
+                color: @white;
+            }
+            .mdi:hover {
+                background-color: @white;
+            }
+            .mdi-linkedin-box:hover {
+                color:#007FB1;
+            }
+            .mdi-github-box:hover {
+                color:#4183C4;
+            }
+            .mdi-twitter-box:hover {
+                color:#00ACED;
+            }
+        }
+    }
+    .transition(0.5s);
+
+    .move {
+        .transition(0.5s);
+        .translate(0, 250%);
+    }
+}

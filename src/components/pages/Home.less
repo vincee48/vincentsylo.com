@@ -1,0 +1,51 @@
+@import '../../styles/mixins/colours.less';
+@import '../../styles/mixins/elements.less';
+
+.Home {
+
+    #jumbo {
+        padding: 5em 1em 8em 1em;
+        background-color: @teal500;
+        color: @white;
+        h1, .tag-line {
+            .transition(0.5s);
+            .translate(0, 0px);
+        }
+        .mini {
+            h1 {
+                .transition(0.5s);
+                .translate(0px, 150%);
+            }
+            .tag-line {
+                .transition(0.5s);
+                .translate(0, 200%);
+            }
+        }
+    }
+
+
+    #about {
+        padding: 5em 1em 8em 1em;
+        background-color: @grey100;
+    }
+
+    #services {
+        padding: 5em 1em 8em 1em;
+        background-color: @grey50;
+        .service-item {
+            &.show {
+                .transition(0.5s);
+                .translate(0,0);
+            }
+            &.hide {
+                .transition(0.5s);
+                .translate(0,150px);
+            }
+        }
+    }
+
+    #contact {
+        padding: 5em 1em 8em 1em;
+        background-color: @grey100;
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "app-name": "vincentsylo",
+    "architecture": "flux",
+    "styles-language": "less"
+  }
+}
