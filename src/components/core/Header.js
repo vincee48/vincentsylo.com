@@ -16,7 +16,6 @@ var Header = React.createClass({
                 <ul id="header-flexible">
                     <li><a href="//github.com/vincee48"><span className="mdi mdi-github-box circle"></span></a></li>
                     <li><a href="//au.linkedin.com/in/vincentsylo"><span className="mdi mdi-linkedin-box circle"></span></a></li>
-                    <li><a href="//twitter.com/vincee48"><span className="mdi mdi-twitter-box circle"></span></a></li>
                 </ul>
             </header>
         );
