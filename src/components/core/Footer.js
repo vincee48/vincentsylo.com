@@ -7,10 +7,12 @@ require('./Footer.less');
 var Footer = React.createClass({
 
     render: function () {
+		var date = new Date();
+		
         return (
             <footer className="secondary-text-color">
                 <div className="container">
-                    &copy; 2015 Vincent Lo
+                    &copy; { date.getFullYear() } Vincent Lo
                 </div>
             </footer>
         );
