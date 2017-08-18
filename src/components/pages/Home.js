@@ -58,14 +58,14 @@ var Home = React.createClass({
             value: 70,
             color: Colors.amber500,
             highlight: Colors.amber300,
-            label: 'Developer'
+            label: 'Front-end (Web / Mobile)'
         };
 
         var designer = {
             value: 30,
             color: Colors.grey500,
             highlight: Colors.grey300,
-            label: 'Designer'
+            label: 'Back-end'
         };
 
         var data = [developer, designer];
@@ -86,7 +86,7 @@ var Home = React.createClass({
                         <div className="row">
                             <div className="twelve columns" id="jumbo-magic">
                                 <h1>Vincent Lo</h1>
-                                <div className="tag-line">Developer</div>
+                                <div className="tag-line">Software Engineer</div>
                             </div>
                         </div>
                     </div>
@@ -127,18 +127,18 @@ var Home = React.createClass({
                         <div className="row">
                             <div className="four columns">
                                 <div className="service-item">
-                                    <SkillSet iconClassName="mdi mdi-console" title="Back End Development">
+                                    <SkillSet iconClassName="mdi mdi-xml" title="Front End Development">
                                         <p className="text-center">
-                                            PHP, Laravel, C#, ASP.NET, Java, Node.js, SQL, Salesforce
+                                            React Native, HTML, JavaScript (ES2015+, React.js, Redux, jQuery, Angular), CSS (PostCSS, CSS Modules, Responsive, LESS/SASS, Boostrap)
                                         </p>
                                     </SkillSet>
                                 </div>
                             </div>
                             <div className="four columns">
                                 <div className="service-item">
-                                    <SkillSet iconClassName="mdi mdi-xml" title="Front End Development">
+                                    <SkillSet iconClassName="mdi mdi-console" title="Back End Development">
                                         <p className="text-center">
-                                            HTML5, JavaScript, CSS3, React.js, React Native, Bootstrap, jQuery, Angular.js
+                                            JavaScript (Node.js), PHP, Laravel, C#, ASP.NET, PostgresSQL, MySQL, Salesforce
                                         </p>
                                     </SkillSet>
                                 </div>
@@ -147,7 +147,7 @@ var Home = React.createClass({
                                 <div className="service-item">
                                     <SkillSet iconClassName="mdi mdi-laptop" title="Design &amp; Game Development">
                                         <p className="text-center">
-                                            Unity3D, 3DS Max, Adobe Illustrator, Adobe Photoshop
+                                            Unity3D, 3DS Max, Affinity Designer, Adobe Illustrator, Adobe Photoshop
                                         </p>
                                     </SkillSet>
                                 </div>
@@ -155,7 +155,7 @@ var Home = React.createClass({
                         </div>
                     </div>
                 </section>
-				
+
 				<Seam iconClassName="mdi mdi-phone" href="#contact" />
 
                 <section id="contact" className="panel">
@@ -169,12 +169,12 @@ var Home = React.createClass({
                                         Interested in working together? Connect with me on <a href="//au.linkedin.com/in/vincentsylo">LinkedIn</a>!
                                     </p>
                                 </div>
-                            </div>                            
+                            </div>
                         </div>
                     </form>
                 </section>
-				
-            </div>			
+
+            </div>
         );
     }
 });
